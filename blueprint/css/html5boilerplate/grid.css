@@ -19,7 +19,7 @@
 
 /* Use this class on any .span / container to see the grid. */
 .showgrid {
-  background: url(src/grid.png);
+  background: url(../src/grid.png);
 }
 
 
@@ -223,10 +223,10 @@ next column, or to pull it into the previous column.  */
 .push-1, .push-2, .push-3, .push-4, .push-5, .push-6, .push-7, .push-8, .push-9, .push-10, .push-11, .push-12, .push-13, .push-14, .push-15, .push-16, .push-17, .push-18, .push-19, .push-20, .push-21, .push-22, .push-23, .push-24 {float: right; position:relative;}
 
 
-/* Misc classes and elements
--------------------------------------------------------------- */
+/* Removed >> The Magnificent CLEARFIX << added Misc classes and elements moved to blueprint grid.css
+-------------------------------------------------------------------------------------------------- */
 
-/* In case you need to add a gutter above/below an element */
+* In case you need to add a gutter above/below an element */
 .prepend-top {
   margin-top:1.5em;
 }
@@ -264,15 +264,18 @@ hr.space {
    Based on How To Clear Floats Without Structural Markup by PiE
    [http://www.positioniseverything.net/easyclearing.html] */
 
+* html .clearfix { height: 1%; } /* Hides from IE-mac \*/      /* Check please maybe we don't need this ?  */
+
 .clearfix:after, .container:after {
-  content: "\0020";
+  content: ".";
   display: block;
   height: 0;
   clear: both;
   visibility: hidden;
-  overflow:hidden;
+  overflow:hidden; /* Check please maybe remove ?  */
 }
-.clearfix, .container {display: block;}
+.container { display: block; }
+.clearfix { display: inline-block; } /* Check please maybe keep display: block; ?  */
 
 /* Regular clearing
    apply to column that should drop below previous ones. */

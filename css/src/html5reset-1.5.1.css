@@ -27,9 +27,12 @@ time, mark, audio, video {
     background:transparent;
 }
 
+/* body { line-height:1; }  keep line-height in blueprint */
+
 body {
-    line-height:1;
+	line-height: 1.5;
 }
+
 
 article,aside,canvas,details,figcaption,figure,
 footer,header,hgroup,menu,nav,section,summary { 
